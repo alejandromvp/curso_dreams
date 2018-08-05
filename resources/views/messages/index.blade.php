@@ -2,7 +2,7 @@
 
 @section('contenido')
 	<h1>todos los mensajes</h1>
-	<table>
+	<table class="table">
 		<thead>
 			<tr>
 				<th>Nombre</th>
@@ -19,7 +19,6 @@
 				<td>{{ $mensajes->mensaje }}</td>
 				<td>
 					<a href="mensajes/{{$mensajes->id}}/edit">editar</a>
-
 					<form method="POST" action="{{route('messages.destroy', $mensajes->id)}}" style="display:inline;">
 						{{method_field('DELETE')}}
 						{{csrf_field()}}
