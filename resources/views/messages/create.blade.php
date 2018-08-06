@@ -21,7 +21,7 @@
 			Mensaje
 		<input type="text" name="mensaje" id="mensaje" class="form-control">
 		</label><br><hr>
-
+		
 		<input type="submit" value="enviar" class="btn btn-primary">
 	</form>
 	@endif

@@ -35,6 +35,8 @@ Route::delete('mensajes/{id}', 'MessagesController@destroy')->name('messages.des
 
 Route::get('login', 'Auth\LoginController@showLoginForm');
 Route::post('login', 'Auth\LoginController@login');
+//-----------------------------------usuarios----------------------------------------------------
+Route::resource('usuarios', 'UsersController');
 //-------------------------------------login-------------------------------------------------------
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');

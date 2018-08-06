@@ -15,10 +15,14 @@
                     @if (auth()->check())
                         <p>{{ auth()->user()->email }}</p><br>
                         <nav class="navegacion">
-                            <a href="{{route('home')}}">Home</a>
-                            <a href="{{route('messages.create')}}">Crear Usuario</a>
-                            <a href="{{route('messages.index')}}">mensajes</a><br>
+                            <a href="{{route('home')}}">Home</a>    
+                            <a href="{{route('messages.create')}}">Crear Mensaje</a>
+                            <a href="{{route('messages.index')}}">mensajes</a>
+                            @if (auth()->user()->role === 'admin')
+                                <a href="{{route('usuarios.index')}}">Ver usuarios</a>
+                            @endif    
                         </nav>
+                        <br>
                         @yield('contenido')
                     @endif
                      
