@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('home')
 
 @section('contenido')
 	<h1>mensaje</h1>
